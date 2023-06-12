@@ -1,0 +1,20 @@
+body {
+  font-family: "Fira Sans", sans-ser;
+}
+.Blog {
+  box-shadow: 0 0 3px blue;
+  transition: all 0.5s;
+}
+.Blog:hover {
+  box-shadow: 0 0 12px 1px blue;
+}
+.Blog p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Blog a {
+  text-decoration: none;
+  color: blue;
+}
