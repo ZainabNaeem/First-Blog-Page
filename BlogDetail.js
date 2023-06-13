@@ -11,7 +11,26 @@ async function getData () {
 var data = await fetch(url+parameter.id);
 var resData = await data.json();
 console.log(resData);
-detailEle.innerHTML = `<h2>${resData.title}</h2> <p>${resData.content}</p>`;
+detailEle.innerHTML = `<h2 class="mt-5 lh-lg">${resData.title}</h2> <p class="lh-lg justify-text-start">${resData.content}</p> `;
   }
 getData();
+const del = document.querySelector("button")
+console.log(del);
+ del.addEventListener('click', (event)=>{
+  const list = new URLSearchParams(window.location.search);
+  const paramete = Object.fromEntries(list.entries());
+    console.log(paramete.id);
+  
+  
+ fetch(url + paramete.id, {
+  method: "DELETE",
+  
+  
+})  
+  .then(response => response.json())
+  .then((response) => {
+    window.location.href='http://127.0.0.1:3000/index.html'
+})
+
+});
 
